@@ -1,0 +1,15 @@
+{% extends "../layouts/default.twig" %}
+
+{% block intro %}
+	<div class="container">
+		{% set title = "Blog" %}
+		{% if data.category %}
+			{% set title = data.category.name %}
+		{% endif %}
+		<h1>f u</h1>
+	</div>
+{% endblock %}
+
+{% block content %}
+<h2>hello members</h2>
+{% endblock %}
