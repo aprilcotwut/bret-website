@@ -21,8 +21,12 @@ body {
   color: rgb(0, 0, 0);
 }
 
+header {
+  height: 60px;
+}
+
 .container {
-  padding: 50px 100px;
+  padding: 30px 50px;
   background-color: rgb(240, 240, 240);
 }
 
@@ -61,6 +65,7 @@ li {
   font-size: 1.2em;
   color: rgb(0, 0, 0);
   transition: .3s;
+  text-decoration: none;
 }
 
 .drawer-menu-item:hover {

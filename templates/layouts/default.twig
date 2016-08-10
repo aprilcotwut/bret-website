@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>{{ title|default("Bret Lehmer") }}</title>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,400italic' rel='stylesheet' type='text/css'>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link href="/styles/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.0/css/drawer.min.css">
@@ -31,9 +32,7 @@
 	</head>
 	<body class="drawer drawer--left drawer-close">
   <header role="banner">
-    <div>
-      <h1 class="title"><a href="#home">BRET LEHMER</a></h1>
-    </div>
+      <h1 class="title"><a href="#home">Bret Lehmer</a></h1>
     <button type="button" class="drawer-toggle drawer-hamburger">
       <span class="sr-only">toggle navigation</span>
       <span class="drawer-hamburger-icon"></span>
@@ -42,9 +41,9 @@
       <ul class="drawer-menu">
         {% for link in navLinks %}
           {% if link.key == section %}
-            <li><a href="{{ link.href }}" class="drawer-menu-item active">{{ link.label }}</a></li>
+            <li class="drawer-menu-item"><a href="{{ link.href }}">{{ link.label }}</a></li>
           {% else %}
-            <li><a href="{{ link.href }}" class="drawer-menu-item">{{ link.label }}</a></li>
+            <li class="drawer-menu-item"><a href="{{ link.href }}">{{ link.label }}</a></li>
           {% endif %}
         {% endfor %}
       </ul>
@@ -94,7 +93,6 @@
 			{% block content %}{% endblock %}
 		</div>
 		<div id="footer" class="container">
-			<p>Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.</p>
 		</div>
   </body>
 </html>
