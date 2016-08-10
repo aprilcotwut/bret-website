@@ -7,7 +7,7 @@ exports = module.exports = function (req, res) {
 	var locals = res.locals;
 
 	// Init locals
-	locals.section = 'members';
+	locals.section = 'group';
 	locals.data = {
 		groupMembers: [],
 	};
@@ -23,5 +23,5 @@ exports = module.exports = function (req, res) {
 	});
 
 	// Render the view
-	view.render('members');
+	view.render('group');
 };
