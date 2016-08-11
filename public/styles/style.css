@@ -27,13 +27,13 @@ body {
   min-height: 100%;
 }
 .container {
-  padding: 40px 30px 30px 30px;
+  padding: 50px;
   background-color: rgb(240, 240, 240);
 }
 
 .content {
   margin-top: 50px;
-  padding: 25px;
+  padding: 30px;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 1em;

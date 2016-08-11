@@ -7,9 +7,11 @@ exports = module.exports = function (req, res) {
 
 	// Set locals
 	locals.section = 'home';
+
 	locals.filters = {
 		post: req.params.post,
 	};
+
 	locals.data = {
 		posts: [],
 	};
