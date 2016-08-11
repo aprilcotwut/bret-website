@@ -8,8 +8,6 @@ exports = module.exports = function (req, res) {
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
 	locals.section = 'myresearch';
-	locals.filters = {
-	};
 
 	locals.data = {
 		projects: [],
@@ -19,19 +17,19 @@ exports = module.exports = function (req, res) {
 	view.on('init', function (next) {
 		console.log('view init');
 		var Project = keystone.list('Project').model;
+    console.log(Project);
 
-			console.log('view query');
-		Project.find()
-		    .where('state', 'published')
-		    .sort('-publishedAt')
-		    .exec(function(err, projects) {
-					if(err) {
-						console.log(err);
-					}
-					locals.data.projects = projects;
-		    });
-			});
-				console.log('query done');
-	// Render the view
-	view.render('myresearch');
+    console.log('view query');
+    Project.find()
+      .where('state', 'published')
+      .sort('-publishedAt')
+      .limit(5)
+      .exec(function(err, results) {
+        locals.data.projects = results;
+     });
+    console.log('query done');
+  });
+
+  // Render the view
+  view.render('myresearch');
 };
