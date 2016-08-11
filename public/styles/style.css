@@ -97,7 +97,7 @@ li.drawer-menu-item:hover {
 }
 
 .footer {
-  background-color: rgb(51, 51, 51);
+  background-color: rgb(30, 30, 30);
   height: 50px;
   width: 100%;
 }
@@ -109,6 +109,7 @@ li.drawer-menu-item:hover {
 }
 
 .sign-in a {
+  background-color: rgb(30, 30, 30);
   padding: 5px;
   color: rgb(255, 255, 255);
   text-transform: uppercase;
@@ -122,10 +123,11 @@ li.drawer-menu-item:hover {
   text-align: right;
   vertical align: middle;
   transition: 0.3s;
-  border: 1px solid rgb(51, 51, 51);
+  border: 1px solid rgb(30, 30, 30);
 }
 
 .sign-in a:hover {
+  background-color: rgb(30, 30, 30);
   padding: 5px;
   color: rgb(255, 255, 255);
   text-transform: uppercase;
@@ -146,3 +148,12 @@ li.drawer-menu-item:hover {
   font-weight: 400;
   font-size: 1em;
 }
+
+.drawer-hamburger-icon,
+.drawer-hamburger-icon:after,
+.drawer-hamburger-icon:before {
+  background-color: rgb(59, 137, 168) !important;
+}
+
+.drawer-open .drawer-hamburger-icon {
+  background-color: transparent !important;

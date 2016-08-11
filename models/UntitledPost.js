@@ -1,3 +1,4 @@
+/*
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
@@ -5,7 +6,7 @@ var Types = keystone.Field.Types;
  * UntitledPost Model
  * ==========
  * Use for Publications and Teaching
- */
+ 
 
 var UntitledPost = new keystone.List('UntitledPost', {
 	map: { name: 'title' },
@@ -25,3 +26,5 @@ UntitledPost.schema.virtual('content.full').get(function () {
 
 UntitledPost.defaultColumns = 'title, state|20%, author|20%, publishedDate|20%';
 UntitledPost.register();
+
+*/
