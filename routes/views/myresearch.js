@@ -15,19 +15,24 @@ exports = module.exports = function (req, res) {
 
 	// Load the current post
 	view.on('init', function (next) {
-		console.log('view init');
-		var Project = keystone.list('Project').model;
-    console.log(Project);
+	//	console.log('view init');
 
-    console.log('view query');
-    Project.find()
-      .where('state', 'published')
-      .sort('-publishedAt')
-      .limit(5)
-      .exec(function(err, results) {
-        locals.data.projects = results;
-     });
-    console.log('query done');
+		var query = keystone.list('Project').paginate({
+      page: req.query.page || 1,
+      perPage: 10,
+      maxPages: 10,
+      filters: {
+        state: 'published',
+      },
+    }).sort('-publishedDate');
+
+    query.exec(function(err, results) {
+      console.log('query exec');
+      locals.data.projects = results;
+      console.log('next');
+      // next(err);
+    });
+    next();
   });
 
   // Render the view
