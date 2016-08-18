@@ -11,6 +11,12 @@ exports.create = {
 	User: [
 		{ 'name.first': 'Admin', 'name.last': 'User', 'email': 'admin@admin.com', 'password': 'admin', 'isAdmin': true },
 	],
+  PostCategory: [
+    { 'name': 'Research' },
+    { 'name': 'Group' },
+    { 'name': 'Publications' },
+    { 'name': 'Teaching' }
+  ]
 };
 
 /*

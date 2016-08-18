@@ -6,12 +6,10 @@ exports = module.exports = function (req, res) {
 	var locals = res.locals;
 
 	// Set locals
-	locals.section = 'home';
-
+	locals.section = 'blog';
 	locals.filters = {
 		post: req.params.post,
 	};
-
 	locals.data = {
 		posts: [],
 	};
